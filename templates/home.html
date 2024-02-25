@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type=text/css>
+      h1{
+            color: 'black';
+            font-family: arial, sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 200px;
+            text-align: center;
+      }
+
+      input[type=submit]{
+          background-color: #ff4d6b;
+          border: 2px;
+          border-radius: 5px;
+          color: white;
+          padding: 16px 32px;
+          cursor: pointer;
+          margin-top: 50px;
+  
+      }
+
+form{
+  display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+      body{
+        margin: 0 auto;
+        width: 50%;
+        height: 50%;
+      }
+  
+      </style>
+  </head>
+  <body>
+    
+    <div class="form-container">
+      <h1>Diabetes Prediction System</h1>
+      <form action="predict">
+        {% csrf_token %}
+        <input type="submit" value="GO" />
+      </form>
+    </div>
+    
+  </body>
+</html>
